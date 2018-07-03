@@ -18,3 +18,23 @@
   </li>
 </ul>
 
+<div>testing</div>
+<ul>
+  <li *ngFor="let aa of tvItems">
+    {{ aa }} testing
+  </li>
+</ul>
+<div>testing2</div>
+
+<div>
+  <p>bonj</p>
+  <p>{{ contents | json}}</p>
+  <p>bonj2</p>
+  <ul>
+    <li *ngFor="let tvitem of contents">
+      {{tvitem.TVItemID}} - {{tvitem.TVPath}} - {{tvitem.TVItemWeb?.TVText}} -
+      {{tvitem.TVItemReport?.TVItemReportTest}}
+    </li>
+  </ul>
+</div>
+
