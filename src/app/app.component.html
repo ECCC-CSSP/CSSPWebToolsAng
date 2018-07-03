@@ -32,8 +32,13 @@
   <p>bonj2</p>
   <ul>
     <li *ngFor="let tvitem of contents">
+
       {{tvitem.TVItemID}} - {{tvitem.TVPath}} - {{tvitem.TVItemWeb?.TVText}} -
       {{tvitem.TVItemReport?.TVItemReportTest}}
+
+      <mat-form-field>
+        <input matInput value={{tvitem.TVItemWeb?.TVText}} />
+      </mat-form-field>
     </li>
   </ul>
 </div>
