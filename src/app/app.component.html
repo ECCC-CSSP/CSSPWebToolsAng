@@ -8,15 +8,51 @@
 <h2>Here are some links to help you start: </h2>
 <ul>
   <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
+    <h2>
+      <a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a>
+    </h2>
   </li>
   <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
+    <h2>
+      <a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a>
+    </h2>
   </li>
   <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
+    <h2>
+      <a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a>
+    </h2>
   </li>
 </ul>
+
+<div class="login-wrapper">
+  <mat-card>
+    <div>
+      <img src="http://wmon01dtchlebl2/csspwebtools/images/CSSPWebTools_logo32.png">
+    </div>
+    <form class="example-form" [formGroup]="complexForm" (ngSubmit)="submitForm(complexForm.value)">
+      <mat-form-field [ngClass]="{'has-error':!complexForm.controls['userName'].valid}">
+        <input matInput placeholder="Username" [formControl]="complexForm.controls['userName']" />
+        <mat-error *ngIf="complexForm.controls['userName'].invalid">{{getErrorMessageUserName()}}</mat-error>
+      </mat-form-field>
+      <br>
+      <mat-form-field [ngClass]="{'has-error':!complexForm.controls['email'].valid}">
+        <input matInput placeholder="email" [formControl]="complexForm.controls['email']" />
+        <mat-error *ngIf="complexForm.controls['email'].invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+      <br>
+      <mat-form-field [ngClass]="{'has-error':!complexForm.controls['passWord'].valid}">
+        <input matInput placeholder="Password" [formControl]="complexForm.controls['passWord']" />
+        <mat-error *ngIf="complexForm.controls['passWord'].invalid">{{getErrorMessagePassword()}}</mat-error>
+        <mat-error class="error" *ngIf="complexForm.controls['passWord'].errors &&
+             complexForm.controls['passWord'].dirty">
+          Password must contain letter and digit.
+        </mat-error>
+      </mat-form-field>
+      <br>
+      <button type="submit" mat-raised-button color="primary" align="right">Login</button>
+    </form>
+  </mat-card>
+</div>
 
 <div>testing</div>
 <ul>
@@ -32,14 +68,7 @@
   <p>bonj2</p>
   <ul>
     <li *ngFor="let tvitem of contents">
-
-      {{tvitem.TVItemID}} - {{tvitem.TVPath}} - {{tvitem.TVItemWeb?.TVText}} -
-      {{tvitem.TVItemReport?.TVItemReportTest}}
-
-      <mat-form-field>
-        <input matInput value={{tvitem.TVItemWeb?.TVText}} />
-      </mat-form-field>
+      {{tvitem.TVItemID}} - {{tvitem.TVPath}} - {{tvitem.TVItemWeb?.TVText}} - {{tvitem.TVItemReport?.TVItemReportTest}}
     </li>
   </ul>
 </div>
-
