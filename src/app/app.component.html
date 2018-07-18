@@ -24,24 +24,25 @@
   </li>
 </ul>
 
+<!--
 <div class="login-wrapper">
   <mat-card>
     <div>
-      <img src="http://wmon01dtchlebl2/csspwebtools/images/CSSPWebTools_logo32.png">
+      <img src="https://weather.gc.ca/template/gcweb/v4.0.24/assets/sig-blk-en.svg" width="200px">
     </div>
     <form class="example-form" [formGroup]="complexForm" (ngSubmit)="submitForm(complexForm.value)">
-      <mat-form-field [ngClass]="{'has-error':!complexForm.controls['userName'].valid}">
-        <input matInput placeholder="Username" [formControl]="complexForm.controls['userName']" />
+      <mat-form-field [ngClass]="{'has-error':!complexForm.controls['userName'].valid}" appearance="legacy">
+        <input matInput placeholder="Username" formControlName="userName" />
         <mat-error *ngIf="complexForm.controls['userName'].invalid">{{getErrorMessageUserName()}}</mat-error>
       </mat-form-field>
       <br>
       <mat-form-field [ngClass]="{'has-error':!complexForm.controls['email'].valid}">
-        <input matInput placeholder="email" [formControl]="complexForm.controls['email']" />
+        <input matInput placeholder="email" formControlName="email" />
         <mat-error *ngIf="complexForm.controls['email'].invalid">{{getErrorMessage()}}</mat-error>
       </mat-form-field>
       <br>
       <mat-form-field [ngClass]="{'has-error':!complexForm.controls['passWord'].valid}">
-        <input matInput placeholder="Password" [formControl]="complexForm.controls['passWord']" />
+        <input matInput placeholder="Password" formControlName="passWord" />
         <mat-error *ngIf="complexForm.controls['passWord'].invalid">{{getErrorMessagePassword()}}</mat-error>
         <mat-error class="error" *ngIf="complexForm.controls['passWord'].errors &&
              complexForm.controls['passWord'].dirty">
@@ -57,18 +58,18 @@
 <div>testing</div>
 <ul>
   <li *ngFor="let aa of tvItems">
-    {{ aa }} testing
+    {{ aa.TVItemWeb | json }} testing
   </li>
 </ul>
 <div>testing2</div>
 
 <div>
   <p>bonj</p>
-  <p>{{ contents | json}}</p>
+  <p>{{ tvItems | json}}</p>
   <p>bonj2</p>
   <ul>
-    <li *ngFor="let tvitem of contents">
+    <li *ngFor="let tvitem of tvItems">
       {{tvitem.TVItemID}} - {{tvitem.TVPath}} - {{tvitem.TVItemWeb?.TVText}} - {{tvitem.TVItemReport?.TVItemReportTest}}
     </li>
   </ul>
-</div>
+</div> -->
