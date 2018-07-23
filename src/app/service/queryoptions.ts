@@ -26,8 +26,7 @@ export class QueryOptions implements QueryBuilder {
             if (value !== 'null') {
                 queryString = queryString.concat(`${key}=${value}&`);
 
-            }
-            else {
+            } else {
                 queryString = queryString.concat(`${key}=&`);
 
             }
