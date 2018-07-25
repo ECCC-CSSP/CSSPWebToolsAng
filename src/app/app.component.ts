@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { TVItemService } from './service/tvitem.service';
 import { HttpClient } from '@angular/common/http';
-import { TVItem } from './model/tvitem';
+import { TVItem } from './model/TVItem';
 import { QueryOptions } from './service/queryoptions';
-import { Observable } from '../../node_modules/rxjs';
+import { Observable } from 'rxjs';
+import { ApiService } from './service/api.service';
 
 @Component({
   selector: 'app-root',
@@ -19,19 +19,19 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    const tvItemService: TVItemService = new TVItemService(this.httpClient);
+    const apiService: ApiService<TVItem> = new ApiService<TVItem>(this.httpClient, 'api/tvitem');
 
-    this.tvItems$ = tvItemService.list(new QueryOptions(0, 100, null, null, null, 'w'));
+    this.tvItems$ = apiService.list(new QueryOptions('fr', 0, 410, 'TVItemID', '', 'r'));
   }
 
   LoadShortList(): void {
-    const tvItemService2: TVItemService = new TVItemService(this.httpClient);
+    const apiService2: ApiService<TVItem> = new ApiService(this.httpClient, 'api/tvitem');
 
-    this.tvItemsShortList$ = tvItemService2.list(new QueryOptions(null, 5, 'fr', null, null, 'w'));
+    this.tvItemsShortList$ = apiService2.list(new QueryOptions('fr', 3, 5, '', '', 'w'));
 
-    const tvItemService3: TVItemService = new TVItemService(this.httpClient);
+    const apiService3: ApiService<TVItem> = new ApiService(this.httpClient, 'api/tvitem');
 
-    tvItemService3.read(7, new QueryOptions(null, null, 'fr', null, null, 'w')).subscribe(r => this.tvItem = r);
+    apiService3.read(7, new QueryOptions('fr', 0, 100, '', '', 'w')).subscribe(r => this.tvItem = r);
 
   }
 

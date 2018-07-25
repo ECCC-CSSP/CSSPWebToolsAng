@@ -4,16 +4,16 @@ export interface QueryBuilder {
 }
 
 export class QueryOptions implements QueryBuilder {
-    constructor(public skip: number = 0, public take: number = 100, public lang: string = 'en',
-        public orderByNames: string = '', public where: string = '', public detail: string = 'e') {
+    constructor(public lang: string = 'en', public skip: number = 0, public take: number = 100,
+        public order: string = '', public where: string = '', public detail: string = 'e') {
     }
 
     toQueryMap() {
         const queryMap = new Map<string, string>();
+        queryMap.set('lang', `${this.lang}`);
         queryMap.set('skip', `${this.skip}`);
         queryMap.set('take', `${this.take}`);
-        queryMap.set('lang', `${this.lang}`);
-        queryMap.set('orderByNames', `${this.orderByNames}`);
+        queryMap.set('order', `${this.order}`);
         queryMap.set('where', `${this.where}`);
         queryMap.set('detail', `${this.detail}`);
 
@@ -23,7 +23,7 @@ export class QueryOptions implements QueryBuilder {
     toQueryString() {
         let queryString = '';
         this.toQueryMap().forEach((value: string, key: string) => {
-            if (value !== 'null') {
+            if (!(value === 'null' || value === '')) {
                 queryString = queryString.concat(`${key}=${value}&`);
 
             } else {
