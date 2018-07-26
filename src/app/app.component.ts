@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     const apiService: ApiService<TVItem> = new ApiService<TVItem>(this.httpClient, 'api/tvitem');
 
-    this.tvItems$ = apiService.list(new QueryOptions('fr', 0, 410, 'TVItemID', '', 'r'));
+    this.tvItems$ = apiService.list(new QueryOptions('fr', 0, 10, 'TVItemID', '', 'r'));
   }
 
   LoadShortList(): void {

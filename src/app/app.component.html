@@ -8,11 +8,11 @@
 </ul>
 
 <div>testing read</div>
-    {{ tvItem.TVItemID }} testing {{ tvItem.TVItemWeb?.TVText }}
+    {{ tvItem.TVItemID }} web {{ tvItem.TVItemWeb?.TVText }} rep {{ tvItem.TVItemReport?.TVItemReportTest }}
 
 <div>testing as observable in ngOnInit</div>
 <ul>
   <li *ngFor="let aa of tvItems$ | async">
-    {{ aa.TVItemID }} testing {{ aa.TVItemWeb?.TVText }}
+    {{ aa.TVItemID }} testing {{ aa.TVItemWeb?.TVText }} rep {{ aa.TVItemReport?.TVItemReportTest }}
   </li>
 </ul>
