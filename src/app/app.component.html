@@ -8,7 +8,7 @@
 </ul>
 
 <div>testing read</div>
-    {{ tvItem.TVItemID }} web {{ tvItem.TVItemWeb?.TVText }} rep {{ tvItem.TVItemReport?.TVItemReportTest }}
+   <p *ngIf="tvItem"> {{ tvItem.TVItemID }} web {{ tvItem.TVItemWeb?.TVText }} rep {{ tvItem.TVItemReport?.TVItemReportTest }} </p>
 
 <div>testing as observable in ngOnInit</div>
 <ul>
