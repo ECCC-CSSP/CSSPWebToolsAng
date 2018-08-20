@@ -1,91 +1,19 @@
-<button>bonjour</button>
 
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<p>testing</p>
-<!-- <button (click)="LoadShortList()">Load short list</button>
+<button (click)="LoadShortList()">Load short list</button>
 
 <div>testing list</div>
 <ul>
   <li *ngFor="let aa of tvItemsShortList$ | async">
-    {{ aa.TVItemID }} testing {{ aa.TVItemWeb?.TVText }}
+    {{ aa.TVItemID }} --- {{ aa.TVPath }} --- {{ aa.TVItemLanguage?.TVText }}
   </li>
 </ul>
 
 <div>testing read</div>
-   <p *ngIf="tvItem"> {{ tvItem.TVItemID }} web {{ tvItem.TVItemWeb?.TVText }} rep {{ tvItem.TVItemReport?.TVItemReportTest }} </p>
+   <p *ngIf="tvItem"> {{ tvItem.TVItemID }} {{ tvItem.TVPath }} </p>
 
 <div>testing as observable in ngOnInit</div>
 <ul>
   <li *ngFor="let aa of tvItems$ | async">
-    {{ aa.TVItemID }} testing {{ aa.TVItemWeb?.TVText }} rep {{ aa.TVItemReport?.TVItemReportTest }}
+    {{ aa.TVItemID }} --- {{ aa.TVPath }} --- {{ aa.TVItemLanguage?.TVText }}
   </li>
-</ul> -->
+</ul>
