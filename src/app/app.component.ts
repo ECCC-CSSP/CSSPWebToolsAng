@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
   tvItems$: Observable<TVItem[]>;
   tvItemsShortList$: Observable<TVItem[]>;
   tvItem: TVItem;
+  panelOpenState = false;
 
   constructor(private httpClient: HttpClient) {
   }
