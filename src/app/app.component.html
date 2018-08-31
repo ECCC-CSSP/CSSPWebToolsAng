@@ -4,7 +4,7 @@
 <div>testing list</div>
 <ul>
   <li *ngFor="let aa of tvItemsShortList$ | async">
-    {{ aa.TVItemID }} --- {{ aa.TVPath }} --- {{ aa.TVItemLanguage?.TVText }}
+    {{ aa.TVItemID }} --- {{ aa.TVPath }} 
   </li>
 </ul>
 
@@ -14,7 +14,7 @@
 <div>testing as observable in ngOnInit</div>
 <ul>
   <li *ngFor="let aa of tvItems$ | async">
-    {{ aa.TVItemID }} --- {{ aa.TVPath }} --- {{ aa.TVItemLanguage?.TVText }}
+    {{ aa.TVItemID }} --- {{ aa.TVPath }} 
   </li>
 </ul>
 
