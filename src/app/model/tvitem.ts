@@ -1,5 +1,14 @@
+/**
+ * @summary TVItem interface
+ */
 export interface TVItem {
+  /**
+   * @property Unique ID
+   */
   TVItemID: number;
+  /**
+   * @field Tree view level
+   */
   TVLevel: number;
   TVPath: string;
   TVType: number;
@@ -22,4 +31,10 @@ export interface TVItemA extends TVItem {
   TVItemLanguage: TVItemLanguage;
   LastUpdateContactTVItemLanguage: TVItemLanguage;
   TVTypeText: string;
+}
+
+export enum bon {
+  allo,
+  testing,
+  bonjour
 }

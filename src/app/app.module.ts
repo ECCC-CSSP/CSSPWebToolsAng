@@ -7,7 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LayoutModule } from '@angular/cdk/layout';
 import { CdkTableModule } from '@angular/cdk/table';
 import { CdkTreeModule } from '@angular/cdk/tree';
-import { BrowserAnimationsModule  } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {
   MatAutocompleteModule,
@@ -47,6 +47,11 @@ import {
   MatTreeModule,
 } from '@angular/material';
 
+/**
+* @summary
+* App Root Module
+*
+*/
 @NgModule({
   declarations: [
     AppComponent,

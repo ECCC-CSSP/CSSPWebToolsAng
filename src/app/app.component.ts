@@ -1,3 +1,7 @@
+/**
+ * app.component.ts document
+ * This document contains the code for the AppComponent.
+ */
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
@@ -12,12 +16,20 @@ export interface Transaction {
   cost: number;
 }
 
+/**
+ * The AppComponent is the root component of CSSPWebToolsAng
+ */
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  /**
+   * @property is static --- rouge
+   */
+  static rouge = 'lsiefj';
+
   // tvItems$: Observable<TVItem[]>;
   // tvItemsShortList$: Observable<TVItem[]>;
   // tvItem: TVItem;
@@ -46,15 +58,21 @@ export class AppComponent implements OnInit {
   options: FormGroup;
   displayedColumns = ['item', 'cost'];
   transactions: Transaction[] = [
-    {item: 'Beach ball', cost: 4},
-    {item: 'Towel', cost: 5},
-    {item: 'Frisbee', cost: 2},
-    {item: 'Sunscreen', cost: 4},
-    {item: 'Cooler', cost: 25},
-    {item: 'Swim suit', cost: 15},
+    { item: 'Beach ball', cost: 4 },
+    { item: 'Towel', cost: 5 },
+    { item: 'Frisbee', cost: 2 },
+    { item: 'Sunscreen', cost: 4 },
+    { item: 'Cooler', cost: 25 },
+    { item: 'Swim suit', cost: 15 },
   ];
 
-  constructor(fb: FormBuilder) {
+ /**
+  * Construct a new AppComponent.
+  *
+  * @param fb passing a FormBuilder type form dependency injection
+  *
+  */
+constructor(fb: FormBuilder) {
     this.options = fb.group({
       color: 'primary',
       fontSize: [16, Validators.min(10)],
@@ -62,6 +80,17 @@ export class AppComponent implements OnInit {
       startDate: [new Date(2018, 3, 3)],
       myEmail: ['', Validators.email],
     });
+  }
+
+  /**
+   * This is of course the good function as the name is showning
+   *
+   * @param aaa This is parameter aaa
+   * @param bbb This is parameeter bbb
+   *
+   */
+  goodFunct(aaa: string, bbb: number): string {
+    return aaa + bbb.toString();
   }
 
   ngOnInit() {
@@ -73,7 +102,7 @@ export class AppComponent implements OnInit {
   }
 
 
-  /** Gets the total cost of all transactions. */
+  /** Gets the total cost of all transactions.  */
   getTotalCost() {
     return this.transactions.map(t => t.cost).reduce((acc, value) => acc + value, 0);
   }

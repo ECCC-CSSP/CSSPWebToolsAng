@@ -1,5 +1,5 @@
 {
-  "name": "csspweb-tools-ang",
+  "name": "csspwebtoolsang",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -10,7 +10,8 @@
     "buildfr": "ng build --aot --i18nFile=src/locale/messages.fr.xlf --i18nFormat=xlf --locale=fr",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "doc": "typedoc --out ./doc --module commonjs --includeDeclarations --ignoreCompilerErrors --excludeExternals"
   },
   "private": true,
   "dependencies": {
@@ -51,6 +52,7 @@
     "protractor": "^5.4.0",
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1",
+    "typedoc": "^0.12.0",
     "typescript": "~2.9.2"
   }
 }
