@@ -1,7 +1,3 @@
-/**
- * app.component.ts document
- * This document contains the code for the AppComponent.
- */
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
