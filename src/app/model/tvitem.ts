@@ -33,8 +33,3 @@ export interface TVItemA extends TVItem {
   TVTypeText: string;
 }
 
-export enum bon {
-  allo,
-  testing,
-  bonjour
-}
