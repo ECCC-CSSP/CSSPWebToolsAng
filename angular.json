@@ -123,5 +123,10 @@
       }
     }
   },
-  "defaultProject": "CSSPWebToolsAng"
+  "defaultProject": "CSSPWebToolsAng",
+  "cli": {
+    "warnings": {
+      "typescriptMismatch": false
+    }
+  }
 }
