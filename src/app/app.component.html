@@ -13,6 +13,7 @@
 <div>testing as observable in ngOnInit</div>
 <ul>
   <li *ngFor="let aa of tvItems$ | async">
-    {{ aa.TVItemID }} --- {{ aa.TVPath }}
+    {{ aa.TVItemID }} --- {{ aa.TVPath }} --- {{ aa.TVTypeText }} --- {{ aa.LastUpdateContactTVItemLanguage.TVText }} --- {{ aa.TVItemLanguage.TVText }}
+    <span>{{ aa.TVItemReportTest }}</span>
   </li>
 </ul>
