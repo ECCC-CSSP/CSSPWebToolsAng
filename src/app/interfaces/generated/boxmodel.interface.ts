@@ -15,9 +15,9 @@ export interface BoxModel extends LastUpdate {
     Depth_m: number;
     Dilution: number;
     Discharge_m3_day: number;
+    DischargeDuration_hour: number;
     FCPreDisinfection_MPN_100ml: number;
     FCUntreated_MPN_100ml: number;
-    FlowDuration_hour: number;
     InfrastructureTVItemID: number;
     LastUpdateContactTVItemID: number;
     LastUpdateDate_UTC: Date;
