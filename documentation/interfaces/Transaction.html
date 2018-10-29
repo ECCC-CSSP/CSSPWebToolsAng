@@ -164,106 +164,47 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
 import { FormBuilder, FormGroup, Validators } from &#x27;@angular/forms&#x27;;
 
-// import { HttpClient } from &#x27;@angular/common/http&#x27;;
-// import { TVItem, TVItemA } from &#x27;./model/TVItem&#x27;;
-// import { QueryOptions } from &#x27;./service/queryoptions&#x27;;
-// import { Observable } from &#x27;rxjs&#x27;;
-// import { ApiService } from &#x27;./service/api.service&#x27;;
+import { HttpClient } from &#x27;@angular/common/http&#x27;;
+import { QueryOptions } from &#x27;./service/queryoptions&#x27;;
+import { Observable } from &#x27;rxjs&#x27;;
+import { ApiService } from &#x27;./service/api.service&#x27;;
+import { TVItemExtraB } from &#x27;./interfaces/generated/tvitemextrab.interface&#x27;;
 
 export interface Transaction {
   item: string;
   cost: number;
 }
 
-/**
- * The AppComponent is the root component of CSSPWebToolsAng
- */
+
 @Component({
   selector: &#x27;app-root&#x27;,
   templateUrl: &#x27;./app.component.html&#x27;,
   styleUrls: [&#x27;./app.component.css&#x27;]
 })
 export class AppComponent implements OnInit {
-  /**
-   * @property is static --- rouge
-   */
-  static rouge &#x3D; &#x27;lsiefj&#x27;;
+  tvItems$: Observable&lt;TVItemExtraB[]&gt;;
+  tvItemsShortList$: Observable&lt;TVItemExtraB[]&gt;;
+  tvItem: TVItemExtraB;
+  panelOpenState &#x3D; false;
 
-  // tvItems$: Observable&lt;TVItem[]&gt;;
-  // tvItemsShortList$: Observable&lt;TVItem[]&gt;;
-  // tvItem: TVItem;
-  // panelOpenState &#x3D; false;
-
-  // constructor(private httpClient: HttpClient) {
-  // }
-
-  // ngOnInit() {
-  //   const apiService: ApiService&lt;TVItem&gt; &#x3D; new ApiService&lt;TVItem&gt;(this.httpClient, &#x27;api/tvitem&#x27;);
-
-  //   this.tvItems$ &#x3D; apiService.list(new QueryOptions(&#x27;fr&#x27;, 0, 140, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;));
-  // }
-
-  // LoadShortList(): void {
-  //   const apiService2: ApiService&lt;TVItem&gt; &#x3D; new ApiService(this.httpClient, &#x27;api/tvitem&#x27;);
-
-  //   this.tvItemsShortList$ &#x3D; apiService2.list(new QueryOptions(&#x27;fr&#x27;, 3, 5, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;));
-
-  //   const apiService3: ApiService&lt;TVItem&gt; &#x3D; new ApiService(this.httpClient, &#x27;api/tvitem&#x27;);
-
-  //   apiService3.read(7, new QueryOptions(&#x27;fr&#x27;, 0, 100, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;)).subscribe(a &#x3D;&gt; this.tvItem &#x3D; a);
-
-  // }
-
-  options: FormGroup;
-  displayedColumns &#x3D; [&#x27;item&#x27;, &#x27;cost&#x27;];
-  transactions: Transaction[] &#x3D; [
-    { item: &#x27;Beach ball&#x27;, cost: 4 },
-    { item: &#x27;Towel&#x27;, cost: 5 },
-    { item: &#x27;Frisbee&#x27;, cost: 2 },
-    { item: &#x27;Sunscreen&#x27;, cost: 4 },
-    { item: &#x27;Cooler&#x27;, cost: 25 },
-    { item: &#x27;Swim suit&#x27;, cost: 15 },
-  ];
-
- /**
-  * Construct a new AppComponent.
-  *
-  * @param fb passing a FormBuilder type form dependency injection
-  *
-  */
-constructor(fb: FormBuilder) {
-    this.options &#x3D; fb.group({
-      color: &#x27;primary&#x27;,
-      fontSize: [16, Validators.min(10)],
-      colorName: [&#x27;testiasdffesfaasdfasefaesfng&#x27;, Validators.maxLength(12)],
-      startDate: [new Date(2018, 3, 3)],
-      myEmail: [&#x27;&#x27;, Validators.email],
-    });
-  }
-
-  /**
-   * This is of course the good function as the name is showning
-   *
-   * @param aaa This is parameter aaa
-   * @param bbb This is parameeter bbb
-   *
-   */
-  goodFunct(aaa: string, bbb: number): string {
-    return aaa + bbb.toString();
+  constructor(private httpClient: HttpClient) {
   }
 
   ngOnInit() {
+    const apiService: ApiService&lt;TVItemExtraB&gt; &#x3D; new ApiService&lt;TVItemExtraB&gt;(this.httpClient, &#x27;api/tvitem&#x27;);
 
+    this.tvItems$ &#x3D; apiService.list(new QueryOptions(&#x27;fr&#x27;, 0, 14, &#x27;&#x27;, &#x27;&#x27;, &#x27;ExtraB&#x27;));
   }
 
-  getFontSize() {
-    return Math.max(10, this.options.value.fontSize);
-  }
+  LoadShortList(): void {
+    const apiService2: ApiService&lt;TVItemExtraB&gt; &#x3D; new ApiService(this.httpClient, &#x27;api/tvitem&#x27;);
 
+    this.tvItemsShortList$ &#x3D; apiService2.list(new QueryOptions(&#x27;fr&#x27;, 3, 5, &#x27;&#x27;, &#x27;&#x27;, &#x27;ExtraB&#x27;));
 
-  /** Gets the total cost of all transactions.  */
-  getTotalCost() {
-    return this.transactions.map(t &#x3D;&gt; t.cost).reduce((acc, value) &#x3D;&gt; acc + value, 0);
+    const apiService3: ApiService&lt;TVItemExtraB&gt; &#x3D; new ApiService(this.httpClient, &#x27;api/tvitem&#x27;);
+
+    apiService3.read(7, new QueryOptions(&#x27;fr&#x27;, 0, 100, &#x27;&#x27;, &#x27;&#x27;, &#x27;ExtraB&#x27;)).subscribe(a &#x3D;&gt; this.tvItem &#x3D; a);
+
   }
 }
 </code></pre>

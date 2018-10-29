@@ -7,7 +7,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { LayoutModule } from '@angular/cdk/layout';
 import { CdkTableModule } from '@angular/cdk/table';
 import { CdkTreeModule } from '@angular/cdk/tree';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { CdkStepperModule } from '@angular/cdk/stepper';
 
 import {
   MatAutocompleteModule,
@@ -18,19 +21,24 @@ import {
   MatCardModule,
   MatCheckboxModule,
   MatChipsModule,
+  MatCommonModule,
   MatDatepickerModule,
   MatDialogModule,
   MatDividerModule,
   MatExpansionModule,
+  MatFormFieldModule,
   MatGridListModule,
   MatIconModule,
   MatInputModule,
+  MatLineModule,
   MatListModule,
   MatMenuModule,
   MatNativeDateModule,
+  MatOptionModule,
   MatPaginatorModule,
   MatProgressBarModule,
   MatProgressSpinnerModule,
+  MatPseudoCheckboxModule,
   MatRadioModule,
   MatRippleModule,
   MatSelectModule,
@@ -45,6 +53,7 @@ import {
   MatToolbarModule,
   MatTooltipModule,
   MatTreeModule,
+  NativeDateModule,
 } from '@angular/material';
 
 /**
@@ -59,12 +68,13 @@ import {
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    FormsModule,
-    ReactiveFormsModule,
-    HttpClientModule,
-    LayoutModule,
+    CdkStepperModule,
     CdkTableModule,
     CdkTreeModule,
+    DragDropModule,
+    FormsModule,
+    HttpClientModule,
+    LayoutModule,
     MatAutocompleteModule,
     MatBadgeModule,
     MatBottomSheetModule,
@@ -73,19 +83,24 @@ import {
     MatCardModule,
     MatCheckboxModule,
     MatChipsModule,
+    MatCommonModule,
     MatDatepickerModule,
     MatDialogModule,
     MatDividerModule,
     MatExpansionModule,
+    MatFormFieldModule,
     MatGridListModule,
     MatIconModule,
     MatInputModule,
+    MatLineModule,
     MatListModule,
     MatMenuModule,
     MatNativeDateModule,
+    MatOptionModule,
     MatPaginatorModule,
     MatProgressBarModule,
     MatProgressSpinnerModule,
+    MatPseudoCheckboxModule,
     MatRadioModule,
     MatRippleModule,
     MatSelectModule,
@@ -100,6 +115,9 @@ import {
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
+    NativeDateModule,
+    ReactiveFormsModule,
+    ScrollingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
