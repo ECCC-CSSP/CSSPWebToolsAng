@@ -5,7 +5,7 @@ export interface QueryBuilder {
 
 export class QueryOptions implements QueryBuilder {
     constructor(public lang: string = 'en', public skip: number = 0, public take: number = 100,
-        public order: string = '', public where: string = '', public detail: string = 'e') {
+        public order: string = '', public where: string = '', public extra: string = '') {
     }
 
     toQueryMap() {
@@ -15,7 +15,7 @@ export class QueryOptions implements QueryBuilder {
         queryMap.set('take', `${this.take}`);
         queryMap.set('order', `${this.order}`);
         queryMap.set('where', `${this.where}`);
-        queryMap.set('detail', `${this.detail}`);
+        queryMap.set('extra', `${this.extra}`);
 
         return queryMap;
     }

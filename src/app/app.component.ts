@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { QueryOptions } from './service/queryoptions';
 import { Observable } from 'rxjs';
 import { ApiService } from './service/api.service';
+import { TVItemExtraA } from './interfaces/generated/tvitemextraa.interface';
 import { TVItem } from './interfaces/generated/tvitem.interface';
 
 export interface Transaction {
@@ -19,30 +20,31 @@ export interface Transaction {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  tvItems$: Observable<TVItem[]>;
-  tvItemsShortList$: Observable<TVItem[]>;
-  tvItem: TVItem;
+  tvItemExtaAList: Observable<TVItemExtraA[]>;
+  tvItemExtraAShortList: Observable<TVItemExtraA[]>;
+  tvItemExtraA: TVItemExtraA;
   panelOpenState = false;
+  tvItemList: Observable<TVItemExtraA[]>;
 
   constructor(private httpClient: HttpClient) {
   }
 
   ngOnInit() {
-    const apiService: ApiService<TVItem> = new ApiService<TVItem>(this.httpClient, 'api/tvitem');
+    const apiService: ApiService<TVItemExtraA> = new ApiService<TVItemExtraA>(this.httpClient, 'api/tvitem');
 
-    this.tvItems$ = apiService.list(new QueryOptions('en', 0, 14, '', '', ''));
+    this.tvItemList = apiService.list(new QueryOptions('en', 0, 14, '', '', 'A'));
   }
 
-  LoadShortList(): void {
-    const apiService2: ApiService<TVItem> = new ApiService(this.httpClient, 'api/tvitem');
+  // LoadShortList(): void {
+  //   const apiService2: ApiService<TVItemExtraA> = new ApiService(this.httpClient, 'api/tvitem');
 
-    this.tvItemsShortList$ = apiService2.list(new QueryOptions('en', 3, 5, '', '', ''));
+  //   this.tvItemExtraAShortList = apiService2.list(new QueryOptions('en', 3, 5, '', '', 'ExtraA'));
 
-    const apiService3: ApiService<TVItem> = new ApiService(this.httpClient, 'api/tvitem');
+  //   const apiService3: ApiService<TVItemExtraA> = new ApiService(this.httpClient, 'api/tvitem');
 
-    apiService3.read(7, new QueryOptions('en', 0, 100, '', '', '')).subscribe(a => this.tvItem = a);
+  //   apiService3.read(7, new QueryOptions('en', 0, 100, '', '', 'ExtraA')).subscribe(a => this.tvItemExtraA = a);
 
-  }
+  // }
 }
 
 // import { Component } from '@angular/core';

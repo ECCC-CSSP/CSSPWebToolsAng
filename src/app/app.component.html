@@ -1,19 +1,19 @@
-<button (click)="LoadShortList()">Load short list</button>
+<!-- <button (click)="LoadShortList()">Load short list</button> -->
 
-<div>testing list</div>
+<!-- <div>testing list</div>
 <ul>
-  <li *ngFor="let aa of tvItemsShortList$ | async">
+  <li *ngFor="let aa of tvItemExtraAShortList | async">
     {{ aa.TVItemID }} --- {{ aa.TVPath }}
   </li>
-</ul>
+</ul> -->
 
-<div>testing read</div>
-<p *ngIf="tvItem"> {{ tvItem.TVItemID }} {{ tvItem.TVPath }} </p>
+<!-- <div>testing read</div>
+<p *ngIf="tvItemList"> {{ tvItemList.TVItemID }} {{ tvItemExtraA.TVPath }} {{ tvItemExtraA.TVItemText }} </p> -->
 
 <div>testing as observable in ngOnInit</div>
 <ul>
-  <li *ngFor="let aa of tvItems$ | async">
-    {{ aa.TVItemID }} --- {{ aa.TVPath }}
+  <li *ngFor="let tvItem of tvItemList | async">
+    {{ tvItem.TVItemID }} --- {{ tvItem.TVPath }} --- {{ tvItem.TVItemText }}
    
   </li>
 </ul>
