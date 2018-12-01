@@ -35,7 +35,6 @@ export class AppComponent implements OnInit {
     this.tvItemList = apiService.list(new QueryOptions('en', 0, 14, '', '', 'A'));
   }
 
-  <button>testing</button>
   
   // LoadShortList(): void {
   //   const apiService2: ApiService<TVItemExtraA> = new ApiService(this.httpClient, 'api/tvitem');
