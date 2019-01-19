@@ -6,7 +6,8 @@ import { QueryOptions } from './service/queryoptions';
 import { Observable } from 'rxjs';
 import { ApiService } from './service/api.service';
 import { TVItemExtraA } from './interfaces/generated/tvitemextraa.interface';
-import { TVItem } from './interfaces/generated/tvitem.interface';
+import { TVItemLanguage } from './interfaces/generated/tvitemlanguage.interface';
+import { LanguageEnum } from './enums/generated/language.enum';
 
 export interface Transaction {
   item: string;
@@ -20,22 +21,22 @@ export interface Transaction {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  tvItemExtaAList: Observable<TVItemExtraA[]>;
-  tvItemExtraAShortList: Observable<TVItemExtraA[]>;
-  tvItemExtraA: TVItemExtraA;
-  panelOpenState = false;
   tvItemList: Observable<TVItemExtraA[]>;
+  tvItemLanguageList: Observable<TVItemLanguage[]>;
 
   constructor(private httpClient: HttpClient) {
   }
 
   ngOnInit() {
-    const apiService: ApiService<TVItemExtraA> = new ApiService<TVItemExtraA>(this.httpClient, 'api/tvitem');
+    const apiServiceTVItem: ApiService<TVItemExtraA> = new ApiService<TVItemExtraA>(this.httpClient, 'api/tvitem');
 
-    this.tvItemList = apiService.list(new QueryOptions('en', 0, 14, '', '', 'A'));
+    this.tvItemList = apiServiceTVItem.list(new QueryOptions('en', 0, 14, '', '', 'A'));
+
+    const apiServiceTVItemLanguage: ApiService<TVItemLanguage> = new ApiService<TVItemLanguage>(this.httpClient, 'api/tvitemlanguage');
+
+    this.tvItemLanguageList = apiServiceTVItemLanguage.list(new QueryOptions('en', 0, 14, '', '', ''));
   }
 
-  
   // LoadShortList(): void {
   //   const apiService2: ApiService<TVItemExtraA> = new ApiService(this.httpClient, 'api/tvitem');
 

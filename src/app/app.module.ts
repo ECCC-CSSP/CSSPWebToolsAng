@@ -21,7 +21,6 @@ import {
   MatCardModule,
   MatCheckboxModule,
   MatChipsModule,
-  MatCommonModule,
   MatDatepickerModule,
   MatDialogModule,
   MatDividerModule,
@@ -33,14 +32,11 @@ import {
   MatLineModule,
   MatListModule,
   MatMenuModule,
-  MatNativeDateModule,
-  MatOptionModule,
   MatPaginatorModule,
   MatProgressBarModule,
   MatProgressSpinnerModule,
   MatPseudoCheckboxModule,
   MatRadioModule,
-  MatRippleModule,
   MatSelectModule,
   MatSidenavModule,
   MatSliderModule,
@@ -53,14 +49,8 @@ import {
   MatToolbarModule,
   MatTooltipModule,
   MatTreeModule,
-  NativeDateModule,
 } from '@angular/material';
 
-/**
-* @summary
-* App Root Module
-*
-*/
 @NgModule({
   declarations: [
     AppComponent,
@@ -83,7 +73,6 @@ import {
     MatCardModule,
     MatCheckboxModule,
     MatChipsModule,
-    MatCommonModule,
     MatDatepickerModule,
     MatDialogModule,
     MatDividerModule,
@@ -95,14 +84,11 @@ import {
     MatLineModule,
     MatListModule,
     MatMenuModule,
-    MatNativeDateModule,
-    MatOptionModule,
     MatPaginatorModule,
     MatProgressBarModule,
     MatProgressSpinnerModule,
     MatPseudoCheckboxModule,
     MatRadioModule,
-    MatRippleModule,
     MatSelectModule,
     MatSidenavModule,
     MatSliderModule,
@@ -115,7 +101,6 @@ import {
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
-    NativeDateModule,
     ReactiveFormsModule,
     ScrollingModule,
   ],
