@@ -8,7 +8,7 @@ export enum InfrastructureTypeEnum {
     WWTP = 1,
     LiftStation = 2,
     Other = 3,
-    SeeOther = 4,
+    SeeOtherMunicipality = 4,
     LineOverflow = 5,
 }
 

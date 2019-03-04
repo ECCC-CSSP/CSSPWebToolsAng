@@ -59,7 +59,7 @@ export interface Infrastructure extends LastUpdate {
     ReceivingWaterSalinity_PSU?: number;
     ReceivingWaterTemperature_C?: number;
     SecondaryTreatmentType?: SecondaryTreatmentTypeEnum;
-    SeeOtherTVItemID?: number;
+    SeeOtherMunicipalityTVItemID?: number;
     Site?: number;
     SiteID?: number;
     TempCatchAllRemoveLater: string;

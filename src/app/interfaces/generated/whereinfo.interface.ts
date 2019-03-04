@@ -7,10 +7,12 @@
 
 import { CSSPError } from './cssperror.interface';
 
+import { Type } from './type.interface';
 import { PropertyTypeEnum } from '../../enums/generated/propertytype.enum';
 import { WhereOperatorEnum } from '../../enums/generated/whereoperator.enum';
 
 export interface WhereInfo extends CSSPError {
+    EnumType: Type;
     PropertyName: string;
     PropertyType: PropertyTypeEnum;
     Value: string;

@@ -8,13 +8,15 @@
 import { LastUpdate } from './lastupdate.interface';
 
 
-export interface TideSite extends LastUpdate {
+export interface DrogueRunPosition extends LastUpdate {
+    CalculatedDirection_deg: number;
+    CalculatedSpeed_m_s: number;
+    DrogueRunID: number;
+    DrogueRunPositionID: number;
     LastUpdateContactTVItemID: number;
     LastUpdateDate_UTC: Date;
-    Province: string;
-    sid: number;
-    TideSiteID: number;
-    TideSiteName: string;
-    TideSiteTVItemID: number;
-    Zone: number;
+    Ordinal: number;
+    StepDateTime_Local: Date;
+    StepLat: number;
+    StepLng: number;
 }

@@ -5,8 +5,7 @@
  *
  */
 export enum AerationTypeEnum {
-    Diffuser = 1,
-    Surface = 2,
-    NotApplicable = 3,
+    MechanicalAirLines = 1,
+    MechanicalSurfaceMixers = 2,
 }
 

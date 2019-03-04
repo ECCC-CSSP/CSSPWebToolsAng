@@ -5,12 +5,9 @@
  *
  */
 
-import { UseOfSite } from './useofsite.interface';
+import { HelpDoc } from './helpdoc.interface';
 
 
-export interface UseOfSiteExtraA extends UseOfSite {
+export interface HelpDocExtraA extends HelpDoc {
     LastUpdateContactText: string;
-    SiteText: string;
-    SubsectorText: string;
-    TVTypeText: string;
 }

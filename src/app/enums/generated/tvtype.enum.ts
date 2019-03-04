@@ -44,7 +44,7 @@ export enum TVTypeEnum {
     MeshNode = 38,
     WebTideNode = 39,
     SamplingPlan = 40,
-    SeeOther = 41,
+    SeeOtherMunicipality = 41,
     LineOverflow = 42,
     BoxModelInputs = 43,
     BoxModelResults = 44,
@@ -90,5 +90,6 @@ export enum TVTypeEnum {
     ConditionallyRestricted = 84,
     OpenDataNational = 85,
     PolSourceSiteMikeScenario = 86,
+    SubsectorTools = 87,
 }
 

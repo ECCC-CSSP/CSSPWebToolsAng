@@ -7,7 +7,7 @@
 
 import { LastUpdate } from './lastupdate.interface';
 
-import { SiteTypeEnum } from '../../enums/generated/sitetype.enum';
+import { TVTypeEnum } from '../../enums/generated/tvtype.enum';
 
 export interface UseOfSite extends LastUpdate {
     EndYear?: number;
@@ -19,9 +19,9 @@ export interface UseOfSite extends LastUpdate {
     Param3?: number;
     Param4?: number;
     SiteTVItemID: number;
-    SiteType: SiteTypeEnum;
     StartYear: number;
     SubsectorTVItemID: number;
+    TVType: TVTypeEnum;
     UseEquation?: boolean;
     UseOfSiteID: number;
     UseWeight?: boolean;

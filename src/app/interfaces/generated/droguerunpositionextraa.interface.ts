@@ -5,12 +5,9 @@
  *
  */
 
-import { UseOfSite } from './useofsite.interface';
+import { DrogueRunPosition } from './droguerunposition.interface';
 
 
-export interface UseOfSiteExtraA extends UseOfSite {
+export interface DrogueRunPositionExtraA extends DrogueRunPosition {
     LastUpdateContactText: string;
-    SiteText: string;
-    SubsectorText: string;
-    TVTypeText: string;
 }

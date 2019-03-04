@@ -10,5 +10,14 @@ export enum SecondaryTreatmentTypeEnum {
     TricklingFilters = 3,
     SequencingBatchReator = 4,
     OxidationDitch = 5,
+    ExtendedAeration = 6,
+    ContactStabilization = 7,
+    PhysicalChemicalProcesses = 8,
+    MovingBedBioReactor = 10,
+    BiologicalAearatedFilters = 11,
+    AeratedSubmergedBioFilmReactor = 12,
+    IntegratedFixedFilmActivatedSludge = 13,
+    ActivatedSludge = 14,
+    ExtendedActivatedSludge = 15,
 }
 

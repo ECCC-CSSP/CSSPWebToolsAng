@@ -9,5 +9,6 @@ export enum PrimaryTreatmentTypeEnum {
     Sedimentation = 2,
     ChemicalCoagulation = 3,
     Filtration = 4,
+    PrimaryClarification = 5,
 }
 

@@ -7,14 +7,13 @@
 
 import { LastUpdate } from './lastupdate.interface';
 
+import { LanguageEnum } from '../../enums/generated/language.enum';
 
-export interface TideSite extends LastUpdate {
+export interface HelpDoc extends LastUpdate {
+    DocHTMLText: string;
+    DocKey: string;
+    HelpDocID: number;
+    Language: LanguageEnum;
     LastUpdateContactTVItemID: number;
     LastUpdateDate_UTC: Date;
-    Province: string;
-    sid: number;
-    TideSiteID: number;
-    TideSiteName: string;
-    TideSiteTVItemID: number;
-    Zone: number;
 }

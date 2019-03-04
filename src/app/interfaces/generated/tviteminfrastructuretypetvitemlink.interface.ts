@@ -16,7 +16,7 @@ export interface TVItemInfrastructureTypeTVItemLink extends CSSPError {
     FlowTo: TVItemInfrastructureTypeTVItemLink;
     InfrastructureType: InfrastructureTypeEnum;
     InfrastructureTypeText: string;
-    SeeOtherTVItemID?: number;
+    SeeOtherMunicipalityTVItemID?: number;
     TVItem: TVItem;
     TVItemLinkList: TVItemLink[];
 }

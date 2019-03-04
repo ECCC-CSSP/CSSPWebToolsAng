@@ -21,7 +21,7 @@ export interface InfrastructureExtraA extends Infrastructure {
     PreliminaryTreatmentTypeText: string;
     PrimaryTreatmentTypeText: string;
     SecondaryTreatmentTypeText: string;
-    SeeOtherText: string;
+    SeeOtherMunicipalityText: string;
     TertiaryTreatmentTypeText: string;
     TreatmentTypeText: string;
 }
