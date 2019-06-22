@@ -10,6 +10,7 @@ import { LastUpdate } from './lastupdate.interface';
 
 export interface PolSourceObservation extends LastUpdate {
     ContactTVItemID: number;
+    DesktopReviewed: boolean;
     LastUpdateContactTVItemID: number;
     LastUpdateDate_UTC: Date;
     Observation_ToBeDeleted: string;
