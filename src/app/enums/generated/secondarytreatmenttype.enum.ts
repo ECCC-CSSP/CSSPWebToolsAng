@@ -8,7 +8,7 @@ export enum SecondaryTreatmentTypeEnum {
     NotApplicable = 1,
     RotatingBiologicalContactor = 2,
     TricklingFilters = 3,
-    SequencingBatchReator = 4,
+    SequencingBatchReactor = 4,
     OxidationDitch = 5,
     ExtendedAeration = 6,
     ContactStabilization = 7,

@@ -13,9 +13,9 @@ import { TranslationStatusEnum } from '../../enums/generated/translationstatus.e
 export interface EmailDistributionListLanguage extends LastUpdate {
     EmailDistributionListID: number;
     EmailDistributionListLanguageID: number;
+    EmailListName: string;
     Language: LanguageEnum;
     LastUpdateContactTVItemID: number;
     LastUpdateDate_UTC: Date;
-    RegionName: string;
     TranslationStatus: TranslationStatusEnum;
 }

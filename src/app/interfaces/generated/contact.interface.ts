@@ -25,5 +25,6 @@ export interface Contact extends LastUpdate {
     LastUpdateDate_UTC: Date;
     LoginEmail: string;
     SamplingPlanner_ProvincesTVItemID: string;
+    Token: string;
     WebName: string;
 }

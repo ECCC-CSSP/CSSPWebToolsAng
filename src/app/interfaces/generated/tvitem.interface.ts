@@ -12,7 +12,7 @@ export interface TVItem extends LastUpdate {
     IsActive: boolean;
     LastUpdateContactTVItemID: number;
     LastUpdateDate_UTC: Date;
-    ParentID: number;
+    ParentID?: number;
     TVItemID: number;
     TVLevel: number;
     TVPath: string;

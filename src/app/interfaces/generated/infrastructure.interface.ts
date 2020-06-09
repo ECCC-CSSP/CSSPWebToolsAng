@@ -18,6 +18,7 @@ import { PrimaryTreatmentTypeEnum } from '../../enums/generated/primarytreatment
 import { SecondaryTreatmentTypeEnum } from '../../enums/generated/secondarytreatmenttype.enum';
 import { TertiaryTreatmentTypeEnum } from '../../enums/generated/tertiarytreatmenttype.enum';
 import { TreatmentTypeEnum } from '../../enums/generated/treatmenttype.enum';
+import { ValveTypeEnum } from '../../enums/generated/valvetype.enum';
 
 export interface Infrastructure extends LastUpdate {
     AerationType?: AerationTypeEnum;
@@ -33,6 +34,7 @@ export interface Infrastructure extends LastUpdate {
     DistanceFromShore_m?: number;
     FacilityType?: FacilityTypeEnum;
     FarFieldVelocity_m_s?: number;
+    HasBackupPower?: boolean;
     HorizontalAngle_deg?: number;
     InfrastructureCategory: string;
     InfrastructureID: number;
@@ -67,5 +69,6 @@ export interface Infrastructure extends LastUpdate {
     TimeOffset_hour?: number;
     TPID?: number;
     TreatmentType?: TreatmentTypeEnum;
+    ValveType?: ValveTypeEnum;
     VerticalAngle_deg?: number;
 }

@@ -26,5 +26,6 @@ export enum FileTypeEnum {
     XYZ = 19,
     KML = 20,
     CSV = 21,
+    WMV = 22,
 }
 

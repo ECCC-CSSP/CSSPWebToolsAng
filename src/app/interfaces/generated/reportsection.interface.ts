@@ -7,15 +7,19 @@
 
 import { LastUpdate } from './lastupdate.interface';
 
+import { LanguageEnum } from '../../enums/generated/language.enum';
 
 export interface ReportSection extends LastUpdate {
     IsStatic: boolean;
+    Language?: LanguageEnum;
     LastUpdateContactTVItemID: number;
     LastUpdateDate_UTC: Date;
     Locked: boolean;
     Ordinal: number;
     ParentReportSectionID?: number;
     ReportSectionID: number;
+    ReportSectionName: string;
+    ReportSectionText: string;
     ReportTypeID: number;
     TemplateReportSectionID?: number;
     TVItemID?: number;

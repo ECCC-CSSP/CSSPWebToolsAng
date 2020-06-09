@@ -52,5 +52,6 @@ export enum AppTaskCommandEnum {
     GenerateKMLFileClassificationForCSSPWebToolsVisualization = 45,
     ProvinceToolsGenerateStats = 46,
     MikeScenarioPrepareResults = 47,
+    ClimateSiteLoadCoCoRaHSData = 48,
 }
 

@@ -23,6 +23,7 @@ export interface MWQMSample extends LastUpdate {
     SampleDateTime_Local: Date;
     SampleType_old?: SampleTypeEnum;
     SampleTypesText: string;
+    TimeText: string;
     Tube_0_1?: number;
     Tube_1_0?: number;
     Tube_10?: number;

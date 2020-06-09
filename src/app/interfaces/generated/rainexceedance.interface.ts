@@ -9,18 +9,16 @@ import { LastUpdate } from './lastupdate.interface';
 
 
 export interface RainExceedance extends LastUpdate {
-    ClimateSiteTVItemIDs: string;
-    DaysPriorToStart: number;
-    EmailDistributionListIDs: string;
-    EndDate_Local?: Date;
+    EndDay: number;
+    EndMonth: number;
+    IsActive: boolean;
     LastUpdateContactTVItemID: number;
     LastUpdateDate_UTC: Date;
-    ProvinceTVItemIDs: string;
+    OnlyStaffEmailDistributionListID?: number;
     RainExceedanceID: number;
-    RainExtreme_mm?: number;
-    RainMaximum_mm?: number;
-    RepeatEveryYear: boolean;
-    StartDate_Local?: Date;
-    SubsectorTVItemIDs: string;
-    YearRound: boolean;
+    RainExceedanceTVItemID: number;
+    RainMaximum_mm: number;
+    StakeholdersEmailDistributionListID?: number;
+    StartDay: number;
+    StartMonth: number;
 }

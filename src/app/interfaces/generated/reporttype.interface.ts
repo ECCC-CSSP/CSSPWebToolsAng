@@ -8,13 +8,18 @@
 import { LastUpdate } from './lastupdate.interface';
 
 import { FileTypeEnum } from '../../enums/generated/filetype.enum';
+import { LanguageEnum } from '../../enums/generated/language.enum';
 import { TVTypeEnum } from '../../enums/generated/tvtype.enum';
 
 export interface ReportType extends LastUpdate {
+    Description: string;
     FileType: FileTypeEnum;
+    Language?: LanguageEnum;
     LastUpdateContactTVItemID: number;
     LastUpdateDate_UTC: Date;
+    Name: string;
     ReportTypeID: number;
+    StartOfFileName: string;
     TVType: TVTypeEnum;
     UniqueCode: string;
 }

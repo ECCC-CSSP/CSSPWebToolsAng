@@ -8,10 +8,13 @@
 import { LastUpdate } from './lastupdate.interface';
 
 
-export interface EmailDistributionList extends LastUpdate {
-    EmailDistributionListID: number;
+export interface PolSourceSiteEffect extends LastUpdate {
+    AnalysisDocumentTVItemID?: number;
+    Comments: string;
     LastUpdateContactTVItemID: number;
     LastUpdateDate_UTC: Date;
-    Ordinal: number;
-    ParentTVItemID: number;
+    MWQMSiteTVItemID: number;
+    PolSourceSiteEffectID: number;
+    PolSourceSiteEffectTermIDs: string;
+    PolSourceSiteOrInfrastructureTVItemID: number;
 }

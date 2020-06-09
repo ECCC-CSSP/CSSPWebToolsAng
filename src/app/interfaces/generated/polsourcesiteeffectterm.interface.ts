@@ -8,10 +8,12 @@
 import { LastUpdate } from './lastupdate.interface';
 
 
-export interface EmailDistributionList extends LastUpdate {
-    EmailDistributionListID: number;
+export interface PolSourceSiteEffectTerm extends LastUpdate {
+    EffectTermEN: string;
+    EffectTermFR: string;
+    IsGroup: boolean;
     LastUpdateContactTVItemID: number;
     LastUpdateDate_UTC: Date;
-    Ordinal: number;
-    ParentTVItemID: number;
+    PolSourceSiteEffectTermID: number;
+    UnderGroupID?: number;
 }

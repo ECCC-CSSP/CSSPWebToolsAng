@@ -8,10 +8,10 @@
 import { LastUpdate } from './lastupdate.interface';
 
 
-export interface EmailDistributionList extends LastUpdate {
-    EmailDistributionListID: number;
+export interface RainExceedanceClimateSite extends LastUpdate {
+    ClimateSiteTVItemID: number;
     LastUpdateContactTVItemID: number;
     LastUpdateDate_UTC: Date;
-    Ordinal: number;
-    ParentTVItemID: number;
+    RainExceedanceClimateSiteID: number;
+    RainExceedanceTVItemID: number;
 }
